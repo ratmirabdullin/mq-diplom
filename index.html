@@ -309,7 +309,11 @@
 							<div class="product_cards">
 								<div class="product_body">
 									<div class="shop_image">
-										<img src="images/shop-item-tablet1.jpg" alt="подушка на диван" class="shop_img">
+										<picture>
+											<source srcset="images/shop-item-tablet1.jpg" media="(min-width: 641px) and (max-width: 1199px)">
+												<source srcset="images/shop-item-mobile1.jpg" media="(max-width: 640px)">
+										<img src="images/shop-item-desk1.jpg" alt="Подушка на диван" class="shop_img">
+									</picture>
 									</div>
 									<div class="description_card">
 										<h2 class="product_title">подушки на диван</h2>
@@ -329,7 +333,11 @@
 								</div>
 								<div class="product_body">
 									<div class="shop_image">
-										<img src="images/shop-item-tablet2.jpg" alt="кукла «Зайчик»" class="shop_img">
+											<picture>
+											<source srcset="images/shop-item-tablet2.jpg" media="(min-width: 641px) and (max-width: 1199px)">
+												<source srcset="images/shop-item-mobile2.jpg" media="(max-width: 640px)">
+										<img src="images/shop-item-desk2.jpg" alt="Кукла «Зайчик»" class="shop_img">
+									</picture>
 									</div>
 									<div class="description_card">
 										<h2 class="product_title">Кукла «Зайчик»</h2>
@@ -349,7 +357,11 @@
 								</div>
 								<div class="product_body">
 									<div class="shop_image">
-										<img src="images/shop-item-tablet3.jpg" alt="Деревянная рамка" class="shop_img">
+										<picture>
+											<source srcset="images/shop-item-tablet3.jpg" media="(min-width: 641px) and (max-width: 1199px)">
+												<source srcset="images/shop-item-mobile3.jpg" media="(max-width: 640px)">
+										<img src="images/shop-item-desk3.jpg" alt="Деревянная рамка" class="shop_img">
+									</picture>
 									</div>
 									<div class="description_card">
 										<h2 class="product_title">Шестиугольная рамка</h2>
@@ -414,15 +426,24 @@
       	</select>
       </label>
       	
-      <label class="check">
-      	<span class="popup_text">Вы подписаны на e-mail рассылку?</span>
-      	<input class="radio" type="radio" name="option" checked>
-      	<span class="btn_radio"></span> Да
+       <label class="label_radio">
+        <span class="popup_text">Вы подписаны на e-mail рассылку?</span>
+       <label >
+       	<input type="radio" class="radio_group_control" name="choise" checked>
+       	<span class="radio_text popup_text">Да</span>
+       </label>
+       <label>
+       	<input type="radio" class="radio_group_control" name="choise">
+       	<span class="radio_text popup_text">Нет</span>
       </label>
-      <label class="check">
-      	<input class="radio" type="radio" name="option"> 
-      	<span class="btn_radio"></span>Нет
       </label>
+
+      <label>
+      	<span class="popup_text">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+<textarea class="textarea_text" placeholder="Может, больше рецептов?"></textarea>
+      </label>
+      <button type="submit" class="send_button">Отправить</button>
+    </div>
 
     </div>
   </div>
