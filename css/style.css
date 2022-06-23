@@ -75,6 +75,28 @@ body {
   padding: 120px 0;
 }
 /*Preview content*/
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+
+.trends_body{
+  display: flex;
+  flex-wrap: wrap;
+}
+.trends_column {
+  flex-basis: 49%;
+  padding-bottom: 10px;
+  
+ }
+}
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+.trends_body {
+  display: flex;
+  gap: 1%;
+
+}
+.trends_column {
+  flex-basis: 24%;
+  }
+}
 .preview_title {
   text-align: center;
   font-size: 20px;
@@ -120,28 +142,7 @@ flex: 1;
   display: flex;
   align-items: flex-end;
 }
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
 
-.trends_body{
-  display: flex;
-  flex-wrap: wrap;
-}
-.trends_column {
-  flex-basis: 49%;
-  padding-bottom: 10px;
-  
-}
-}
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
-.trends_body {
-  display: flex;
-  gap: 1%;
-
-}
-.trends_column {
-  flex-basis: 24%;
-  }
-}
 .trends_item-flowers {
   background: url("../images/trend1.jpg");
   background-repeat: no-repeat;
@@ -334,6 +335,25 @@ display: none;
   text-align: center;
 }
 /*======POSTS*/
+@media (min-width: 641px) and (max-width: 1199px) {
+  .inner {
+    display: flex;
+  }
+  .post {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .posts {
+    flex-grow: 6;
+  }
+  .aside {
+    flex-grow: 4;
+  }
+  .time {
+    margin-bottom: 22px;
+  }
+}
 
 .inner_wraper {
   margin-top: 60px;
@@ -353,26 +373,7 @@ display: none;
 .post {
   display: flex;
 }
-@media (min-width: 641px) and (max-width: 1199px) {
-  .inner {
-    display: flex;
-  }
-  .post {
-    display: flex;
-    flex-direction: column;
 
-  }
-
-  .posts {
- flex-grow: 6;
-  }
-  .aside {
-    flex-grow: 4;
-  }
-  .time {
-    margin-bottom: 22px;
-  }
-}
 .post:not(:last-child) {
   margin-bottom: 60px;
 }
@@ -699,18 +700,6 @@ h3::after {
 
 
 /*========PRODUCTs*/
-
-.products {
-  max-width: 1200px;
-  width: 100%;
-  margin: auto;
-  padding: 0 15px;
-}
-.product_cards {
-  display: flex;
-  gap: 10%;
-  
-}
 @media (min-width: 641px) and (max-width: 1199px) {
   .product_cards {
     display: flex;
@@ -721,11 +710,22 @@ h3::after {
   }
 }
 
-.product_body {
-  flex: 0 1 30%;
-
+.products {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 0 15px;
 }
 
+.product_cards {
+  display: flex;
+  gap: 10%;
+  
+}
+.product_body {
+  flex: 1;
+
+}
 
 .description_card {
   border: 3px solid #b59f5b;
