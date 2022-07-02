@@ -1128,7 +1128,7 @@ display: none;
 .footer_list > li:not(:first-child) {
   margin-left: 20px;
 }
-.text {
+.visability_text {
   position: absolute;
   width: 1px;
   height: 1px;
