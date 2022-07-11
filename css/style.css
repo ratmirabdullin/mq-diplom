@@ -171,7 +171,9 @@ body {
 }
 .trends_column:not(:last-child) {
   margin-right: 5px;
-}
+  }
+
+
 @media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
 .trends_container {
   margin-bottom: 60px;
@@ -183,16 +185,18 @@ body {
 .trends_column {
   flex-basis: 49%;
  }
-.trends_column:nth-child(even) {
+ .trends_column:not(:last-child) {
+    margin-right: 0;
+    }
+.trends_column:nth-child(odd) {
   margin-right: 5px;
   }
 .trends_column:nth-child(4n+1), 
 .trends_column:nth-child(4n+2)
 {
   margin-bottom: 5px;
+ }
 }
-}
-
 
 @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
 .trends_container {
@@ -201,13 +205,22 @@ body {
 }
 .trends_body {
   display: flex;
+  flex-wrap: wrap;
 }
 .trends_column {
-  flex-basis: 25%;
+  flex-basis: 49%;
   }
-.trends_column:not(:last-child) {
-  padding-right: 5px;
+  .trends_column:not(:last-child) {
+    margin-right: 0;
+    }
+.trends_column:nth-child(odd) {
+  margin-right: 5px;
   }
+  .trends_column:nth-child(4n+1), 
+  .trends_column:nth-child(4n+2)
+{
+  margin-bottom: 5px;
+ }
 }
 @media (max-width: 640px) and (orientation: portrait) {
 .trends_container {
@@ -220,20 +233,25 @@ body {
   flex-basis: 100%;
   padding-bottom: 5px;
 }
+.trends_column:not(:last-child) {
+  margin-right: 0px;
+  }
 
 }
 @media (max-width: 640px) and (orientation: landscape) {
-  .trends_container {
+.trends_container {
   margin-bottom: 40px;
 }
-  .trends_body {
+.trends_body {
     display: flex;
     flex-wrap: wrap;
   }
-  .trends_column {
-    flex-basis: 50%;
-    min-width: 180px;
+.trends_column {
+  flex-basis: 49%;
+  min-width: 180px;
+  margin-right: 0px;
   }
+
 }
 .item-trends {
   padding: 35px;
@@ -920,7 +938,6 @@ display: none;
   padding: 0 15px;
   display: flex;
   flex-direction: column;
-  
 }
 
 .post {
@@ -941,10 +958,11 @@ display: none;
 .aside {
  max-width: 640px;
  width: 100%;
-
+ margin-left: 0;
 }
 .img {
-  max-width: 345px;
+  min-width: 290px;
+  width: 100%;
 }
 
 .new_paragraph {
@@ -997,7 +1015,7 @@ display: none;
 }
 @media (max-width: 640px) {
   .products {
-  max-width: 360px;
+  width: 100%;
   margin: auto;
   padding: 0 15px;
 }
@@ -1014,8 +1032,8 @@ display: none;
   border: 3px solid #b59f5b;
   padding: 50px 20px;
   margin-top: -30px;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -15px;
+  margin-right: -15px;
   position: relative;
 
 }
@@ -1044,6 +1062,13 @@ display: none;
 @media (max-width: 640px) {
   .product_title {
  font-size: 17px;
+  }
+  .shop_image {
+    display:  block;
+  }
+  .shop_img {
+    min-width: 290px;
+    width: 100%;
   }
 }
 .product_text {
