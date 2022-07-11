@@ -17,6 +17,10 @@
 
 body {
   font-family: "OpenSans Regular", sans-serif;
+  width: 100%;
+  max-width: 100%;
+  -moz-overflow-x: hidden;
+  -webkit-overflow-x: hidden;
 }
 
 * {
