@@ -23,6 +23,7 @@ body {
   -webkit-overflow-x: hidden;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -657,6 +658,7 @@ display: none;
 
 .aside {
   margin-left: 40px;
+  width: 270px;
 }
 .new {
   display: flex;
@@ -786,10 +788,8 @@ display: none;
 
 .mailing_list {
   margin: 0 auto;
-  max-width: 270px;
 }
 .mailing_bar {
-  max-width: 270px;
   width: 100%;
 }
 .email {
@@ -999,6 +999,7 @@ display: none;
 .product_body {
   display: flex;
   flex-direction: column;
+  width: 100%;
 
 }
 @media (min-width: 641px) and (max-width: 1199px) {
@@ -1019,7 +1020,7 @@ display: none;
 }
 @media (max-width: 640px) {
   .products {
-  width: 100%;
+  width: 95%;
   margin: auto;
   padding: 0 15px;
 }
@@ -1039,7 +1040,6 @@ display: none;
   margin-left: -15px;
   margin-right: -15px;
   position: relative;
-
 }
 .shop_image {
   display: flex;
@@ -1071,7 +1071,7 @@ display: none;
     display:  block;
   }
   .shop_img {
-    min-width: 290px;
+    min-width: 260px;
     width: 100%;
   }
 }
@@ -1341,7 +1341,7 @@ display: none;
   outline: none;
 
 }
-textarea::placeholder {
+.textarea_text::placeholder {
   font-size: 13px;
   font-family: "OpenSans Bold", sans-serif;
   padding-top: 10px;
