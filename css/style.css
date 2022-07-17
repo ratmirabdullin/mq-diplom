@@ -17,12 +17,7 @@
 
 body {
   font-family: "OpenSans Regular", sans-serif;
-  width: 100%;
-  max-width: 100%;
-  -moz-overflow-x: hidden;
-  -webkit-overflow-x: hidden;
 }
-
 
 * {
   margin: 0;
@@ -172,7 +167,6 @@ body {
 }
 .trends_column {
   flex: 1;
-  min-width: 320px;
 }
 .trends_column:not(:last-child) {
   margin-right: 5px;
@@ -558,6 +552,7 @@ display: none;
 
 .posts {
   max-width: 778px;
+  width: 100%;
 }
 
 .post {
@@ -915,7 +910,6 @@ display: none;
 @media (min-width: 641px) and (max-width: 1199px) {
   .inner {
   display: flex;
-  
   margin: auto;
   padding: 0 35px;
   justify-content: space-between;
@@ -955,12 +949,10 @@ display: none;
 
 }
 .posts {
-  max-width: 640px;
   width: 100%;
   margin-bottom: 30px;
 }
 .aside {
- max-width: 640px;
  width: 100%;
  margin-left: 0;
 }
@@ -1202,21 +1194,22 @@ display: none;
 /*====================POPUP*/
 
 .popup {
-  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, .6);
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .popup_body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100%;
   padding: 30px 10px;
 }
 .popup_content {
@@ -1292,6 +1285,7 @@ display: none;
   outline: none;
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-left: 15px;
   background-color: #f4f7f6;
   color: rgba(0, 0, 0, .5);
   background-image: url("../svg/form-arrows.svg");
@@ -1305,6 +1299,9 @@ display: none;
 .popup_select:hover {
   cursor: pointer;
   color: #000;
+}
+.popup_select:focus {
+  border: 1px solid #b59f5b;
 }
 .radio_group_control {
   display: none;
@@ -1332,20 +1329,24 @@ display: none;
 }
 
 .textarea_text {
-  max-width: 360px;
   width: 100%;
   height: 130px;
-  resize: none;
   border: none;
-  background-color: #f4f7f6;
+  background: #f4f7f6;
+  padding: 20px;
+  font-size: 13px;
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  resize: none;
   outline: none;
-
 }
 .textarea_text::placeholder {
   font-size: 13px;
   font-family: "OpenSans Bold", sans-serif;
-  padding-top: 10px;
-  padding-left: 10px;
+}
+.textarea_text:focus {
+  border: 1px solid #b59f5b;
 }
 .send_button {
   background-color: #b59f5b;
