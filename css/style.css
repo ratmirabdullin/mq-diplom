@@ -1155,6 +1155,7 @@ display: none;
   height: 1px;
   clip: rect(1px 1px 1px 1px);
   z-index: 10;
+  overflow: hidden;
 }
 
 .social_icon {
@@ -1202,7 +1203,7 @@ display: none;
   left: 0;
   z-index: 100;
 
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -1210,7 +1211,7 @@ display: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 10px;
+
 }
 .popup_content {
   background-color: #fff;
