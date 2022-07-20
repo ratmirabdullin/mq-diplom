@@ -560,7 +560,7 @@ display: none;
 }
 
 .post:not(:last-child) {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .category {
@@ -568,7 +568,16 @@ display: none;
   margin-left: 25px;
   font-size: 14px;
 }
-
+@media (max-width: 640px){
+.category::after {
+  content: "";
+  display: block;
+  position: relative;
+  margin-top: 24px;
+  height: 4px;
+  background: #eeeeee;
+ }
+}
 .category_items {
   display: flex;
   text-transform: uppercase;
